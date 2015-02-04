@@ -6,8 +6,9 @@
 //  Copyright (c) 2014 Soft-Artel.com. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
+#import <UIKit/UIKit.h>
+#import "SPEventEditVC.h"
 @interface ViewController : UIViewController
 
 

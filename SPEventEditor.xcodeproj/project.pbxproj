@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE365A601A659252004AB3A1 /* tst-bgr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE365A5F1A659252004AB3A1 /* tst-bgr.jpg */; };
+		DE365A641A659501004AB3A1 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = DE365A631A659501004AB3A1 /* UIImage+ImageEffects.m */; };
+		DE365A671A65A194004AB3A1 /* UIView+UIView_Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE365A661A65A194004AB3A1 /* UIView+UIView_Additions.m */; };
+		DEBF42811A66711F00C511E9 /* Icon_event_to_note.png in Resources */ = {isa = PBXBuildFile; fileRef = DEBF42801A66711F00C511E9 /* Icon_event_to_note.png */; };
+		DEBF42831A66726000C511E9 /* bgr-grid@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEBF42821A66726000C511E9 /* bgr-grid@2x.jpg */; };
+		DEBF42861A6672A300C511E9 /* Arrow_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEBF42841A6672A300C511E9 /* Arrow_blue@2x.png */; };
+		DEBF42871A6672A300C511E9 /* Paper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEBF42851A6672A300C511E9 /* Paper@2x.png */; };
+		DEBF428B1A67128900C511E9 /* Paper-top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEBF428A1A67128900C511E9 /* Paper-top@2x.png */; };
+		DEBF428D1A67169F00C511E9 /* dots@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DEBF428C1A67169F00C511E9 /* dots@2x.png */; };
+		DEBF428F1A67D89900C511E9 /* icon-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = DEBF428E1A67D89900C511E9 /* icon-calendar.png */; };
+		DEBF42921A67DAF700C511E9 /* NSDate+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBF42911A67DAF700C511E9 /* NSDate+Extention.m */; };
 		DEF910681A3A9ED200820513 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF910671A3A9ED200820513 /* main.m */; };
 		DEF9106B1A3A9ED200820513 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF9106A1A3A9ED200820513 /* AppDelegate.m */; };
 		DEF9106E1A3A9ED200820513 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF9106D1A3A9ED200820513 /* ViewController.m */; };
@@ -14,6 +25,12 @@
 		DEF910731A3A9ED200820513 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEF910721A3A9ED200820513 /* Images.xcassets */; };
 		DEF910761A3A9ED200820513 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEF910741A3A9ED200820513 /* LaunchScreen.xib */; };
 		DEF910821A3A9ED200820513 /* SPEventEditorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF910811A3A9ED200820513 /* SPEventEditorTests.m */; };
+		DEF9108E1A3A9F8400820513 /* SPEventEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF9108C1A3A9F8400820513 /* SPEventEditVC.m */; };
+		DEF9108F1A3A9F8400820513 /* SPEventEditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEF9108D1A3A9F8400820513 /* SPEventEditVC.xib */; };
+		DEF910931A3AA42800820513 /* SPEventEditDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF910911A3AA42800820513 /* SPEventEditDayCell.m */; };
+		DEF910941A3AA42800820513 /* SPEventEditDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEF910921A3AA42800820513 /* SPEventEditDayCell.xib */; };
+		DEF910A31A3B607E00820513 /* SPEventEditDayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF910A21A3B607E00820513 /* SPEventEditDayVC.m */; };
+		DEF910A61A3B756400820513 /* SPEventEditDayGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF910A51A3B756400820513 /* SPEventEditDayGrid.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +44,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE365A5F1A659252004AB3A1 /* tst-bgr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tst-bgr.jpg"; sourceTree = "<group>"; };
+		DE365A621A659501004AB3A1 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		DE365A631A659501004AB3A1 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		DE365A651A65A194004AB3A1 /* UIView+UIView_Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIView_Additions.h"; sourceTree = "<group>"; };
+		DE365A661A65A194004AB3A1 /* UIView+UIView_Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIView_Additions.m"; sourceTree = "<group>"; };
+		DEBF42801A66711F00C511E9 /* Icon_event_to_note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_event_to_note.png; sourceTree = "<group>"; };
+		DEBF42821A66726000C511E9 /* bgr-grid@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bgr-grid@2x.jpg"; sourceTree = "<group>"; };
+		DEBF42841A6672A300C511E9 /* Arrow_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow_blue@2x.png"; sourceTree = "<group>"; };
+		DEBF42851A6672A300C511E9 /* Paper@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Paper@2x.png"; sourceTree = "<group>"; };
+		DEBF428A1A67128900C511E9 /* Paper-top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Paper-top@2x.png"; sourceTree = "<group>"; };
+		DEBF428C1A67169F00C511E9 /* dots@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dots@2x.png"; sourceTree = "<group>"; };
+		DEBF428E1A67D89900C511E9 /* icon-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-calendar.png"; sourceTree = "<group>"; };
+		DEBF42901A67DAF700C511E9 /* NSDate+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extention.h"; sourceTree = "<group>"; };
+		DEBF42911A67DAF700C511E9 /* NSDate+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extention.m"; sourceTree = "<group>"; };
 		DEF910621A3A9ED200820513 /* SPEventEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPEventEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF910661A3A9ED200820513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEF910671A3A9ED200820513 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +71,16 @@
 		DEF9107B1A3A9ED200820513 /* SPEventEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPEventEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEF910801A3A9ED200820513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEF910811A3A9ED200820513 /* SPEventEditorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPEventEditorTests.m; sourceTree = "<group>"; };
+		DEF9108B1A3A9F8400820513 /* SPEventEditVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPEventEditVC.h; sourceTree = "<group>"; };
+		DEF9108C1A3A9F8400820513 /* SPEventEditVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPEventEditVC.m; sourceTree = "<group>"; };
+		DEF9108D1A3A9F8400820513 /* SPEventEditVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPEventEditVC.xib; sourceTree = "<group>"; };
+		DEF910901A3AA42800820513 /* SPEventEditDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPEventEditDayCell.h; sourceTree = "<group>"; };
+		DEF910911A3AA42800820513 /* SPEventEditDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPEventEditDayCell.m; sourceTree = "<group>"; };
+		DEF910921A3AA42800820513 /* SPEventEditDayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPEventEditDayCell.xib; sourceTree = "<group>"; };
+		DEF910A11A3B607E00820513 /* SPEventEditDayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPEventEditDayVC.h; path = ../SPEventEditDayVC.h; sourceTree = "<group>"; };
+		DEF910A21A3B607E00820513 /* SPEventEditDayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPEventEditDayVC.m; path = ../SPEventEditDayVC.m; sourceTree = "<group>"; };
+		DEF910A41A3B756400820513 /* SPEventEditDayGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPEventEditDayGrid.h; sourceTree = "<group>"; };
+		DEF910A51A3B756400820513 /* SPEventEditDayGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPEventEditDayGrid.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +101,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE365A571A6591A3004AB3A1 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				DEBF428C1A67169F00C511E9 /* dots@2x.png */,
+				DEBF428A1A67128900C511E9 /* Paper-top@2x.png */,
+				DEBF42801A66711F00C511E9 /* Icon_event_to_note.png */,
+				DEBF42821A66726000C511E9 /* bgr-grid@2x.jpg */,
+				DEBF42841A6672A300C511E9 /* Arrow_blue@2x.png */,
+				DEBF42851A6672A300C511E9 /* Paper@2x.png */,
+				DEBF428E1A67D89900C511E9 /* icon-calendar.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		DE365A5E1A659252004AB3A1 /* tmp */ = {
+			isa = PBXGroup;
+			children = (
+				DE365A5F1A659252004AB3A1 /* tst-bgr.jpg */,
+			);
+			path = tmp;
+			sourceTree = "<group>";
+		};
+		DE365A611A659501004AB3A1 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE365A621A659501004AB3A1 /* UIImage+ImageEffects.h */,
+				DE365A631A659501004AB3A1 /* UIImage+ImageEffects.m */,
+				DE365A651A65A194004AB3A1 /* UIView+UIView_Additions.h */,
+				DE365A661A65A194004AB3A1 /* UIView+UIView_Additions.m */,
+				DEBF42901A67DAF700C511E9 /* NSDate+Extention.h */,
+				DEBF42911A67DAF700C511E9 /* NSDate+Extention.m */,
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
 		DEF910591A3A9ED200820513 = {
 			isa = PBXGroup;
 			children = (
+				DE365A611A659501004AB3A1 /* frameworks */,
+				DE365A5E1A659252004AB3A1 /* tmp */,
+				DE365A571A6591A3004AB3A1 /* resources */,
 				DEF910641A3A9ED200820513 /* SPEventEditor */,
 				DEF9107E1A3A9ED200820513 /* SPEventEditorTests */,
 				DEF910631A3A9ED200820513 /* Products */,
@@ -86,6 +165,16 @@
 				DEF9106C1A3A9ED200820513 /* ViewController.h */,
 				DEF9106D1A3A9ED200820513 /* ViewController.m */,
 				DEF9106F1A3A9ED200820513 /* Main.storyboard */,
+				DEF9108B1A3A9F8400820513 /* SPEventEditVC.h */,
+				DEF9108C1A3A9F8400820513 /* SPEventEditVC.m */,
+				DEF9108D1A3A9F8400820513 /* SPEventEditVC.xib */,
+				DEF910A11A3B607E00820513 /* SPEventEditDayVC.h */,
+				DEF910A21A3B607E00820513 /* SPEventEditDayVC.m */,
+				DEF910A41A3B756400820513 /* SPEventEditDayGrid.h */,
+				DEF910A51A3B756400820513 /* SPEventEditDayGrid.m */,
+				DEF910901A3AA42800820513 /* SPEventEditDayCell.h */,
+				DEF910911A3AA42800820513 /* SPEventEditDayCell.m */,
+				DEF910921A3AA42800820513 /* SPEventEditDayCell.xib */,
 				DEF910721A3A9ED200820513 /* Images.xcassets */,
 				DEF910741A3A9ED200820513 /* LaunchScreen.xib */,
 				DEF910651A3A9ED200820513 /* Supporting Files */,
@@ -168,6 +257,7 @@
 				TargetAttributes = {
 					DEF910611A3A9ED200820513 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = CT3F4YR9RG;
 					};
 					DEF9107A1A3A9ED200820513 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -200,8 +290,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEF910711A3A9ED200820513 /* Main.storyboard in Resources */,
+				DEBF428B1A67128900C511E9 /* Paper-top@2x.png in Resources */,
+				DEBF42811A66711F00C511E9 /* Icon_event_to_note.png in Resources */,
 				DEF910761A3A9ED200820513 /* LaunchScreen.xib in Resources */,
+				DE365A601A659252004AB3A1 /* tst-bgr.jpg in Resources */,
+				DEBF42831A66726000C511E9 /* bgr-grid@2x.jpg in Resources */,
+				DEF9108F1A3A9F8400820513 /* SPEventEditVC.xib in Resources */,
+				DEF910941A3AA42800820513 /* SPEventEditDayCell.xib in Resources */,
+				DEBF42871A6672A300C511E9 /* Paper@2x.png in Resources */,
 				DEF910731A3A9ED200820513 /* Images.xcassets in Resources */,
+				DEBF428D1A67169F00C511E9 /* dots@2x.png in Resources */,
+				DEBF428F1A67D89900C511E9 /* icon-calendar.png in Resources */,
+				DEBF42861A6672A300C511E9 /* Arrow_blue@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +319,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE365A641A659501004AB3A1 /* UIImage+ImageEffects.m in Sources */,
+				DEBF42921A67DAF700C511E9 /* NSDate+Extention.m in Sources */,
 				DEF9106E1A3A9ED200820513 /* ViewController.m in Sources */,
+				DEF910A61A3B756400820513 /* SPEventEditDayGrid.m in Sources */,
+				DE365A671A65A194004AB3A1 /* UIView+UIView_Additions.m in Sources */,
+				DEF910931A3AA42800820513 /* SPEventEditDayCell.m in Sources */,
 				DEF9106B1A3A9ED200820513 /* AppDelegate.m in Sources */,
+				DEF910A31A3B607E00820513 /* SPEventEditDayVC.m in Sources */,
+				DEF9108E1A3A9F8400820513 /* SPEventEditVC.m in Sources */,
 				DEF910681A3A9ED200820513 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,9 +452,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SPEventEditor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -355,9 +466,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SPEventEditor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -414,6 +529,7 @@
 				DEF910871A3A9ED200820513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEF910881A3A9ED200820513 /* Build configuration list for PBXNativeTarget "SPEventEditorTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +538,7 @@
 				DEF9108A1A3A9ED200820513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
