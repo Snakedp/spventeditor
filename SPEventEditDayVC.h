@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SPEventEditDayGrid.h"
+#import "SPEventResize.h"
 
 #define  SPNV_DATAP_RANGE 1
 
@@ -49,6 +50,7 @@
     int oldRowNum;
     
     SPEventEditDayGrid  * grid;
+    SPEventResize * event;
     
 }
 

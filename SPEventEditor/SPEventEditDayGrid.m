@@ -448,4 +448,30 @@
 }
 
 
+
+
+
+
+#pragma mark -
+#pragma mark SPEventResizeDelegate
+
+- (CGFloat)     offsetByTime:(NSString *) time{
+    
+    NSArray * t = [time componentsSeparatedByString:@":"];
+    
+    int hrs = [t[0] integerValue];
+    int min = [t[1] integerValue];
+    
+    int minutes = hrs * 60 + min;
+    
+    return (minutes / self.zoomScale) * CAL_ROW_HEIGHT + CAL_BOUNDS_OFFSET;
+}
+
+
+- (NSString *)  timeByOffset:(CGFloat)    offset{
+    return [self timeByY: offset];
+}
+
+
+
 @end

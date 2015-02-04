@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F21AF64C-E2D5-4000-A3BB-AA4119A0ABCA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SPEventEditor</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2474A60E782955FC6CD0ADE979C537391629AE8E</key>
+		<string>https://github.com/Snakedp/spventeditor.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SPEventEditor.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2474A60E782955FC6CD0ADE979C537391629AE8E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Snakedp/spventeditor.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2474A60E782955FC6CD0ADE979C537391629AE8E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2474A60E782955FC6CD0ADE979C537391629AE8E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>spventeditor</string>
+		</dict>
+	</array>
+</dict>
+</plist>

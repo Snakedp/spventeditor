@@ -8,7 +8,7 @@
 
 #import "SPEventEditDayVC.h"
 #import "SPEventEditDayCell.h"
-
+#import "SPEventResize.h"
 @interface SPEventEditDayVC ()
 
 @end
@@ -42,6 +42,8 @@ static NSString * const reuseIdentifier = @"dayCell";
     
     instance.date = date;
     
+    
+    instance->event = [SPEventResize eventResizeInPanel: instance->grid andNote:nil];
     return instance;
 }
 
@@ -182,6 +184,9 @@ static NSString * const reuseIdentifier = @"dayCell";
     if(self.delegate)
         [self.delegate dayGridScroll: scrollView.contentOffset.x ];
 }
+
+
+
 
 
 #pragma mark -

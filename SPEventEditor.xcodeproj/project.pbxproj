@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330A77AD1A8272B6000EED4A /* SPEventResize.m in Sources */ = {isa = PBXBuildFile; fileRef = 330A77AC1A8272B6000EED4A /* SPEventResize.m */; };
+		330A77AF1A8273EA000EED4A /* SPEventResize.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330A77AE1A8273EA000EED4A /* SPEventResize.xib */; };
 		DE365A601A659252004AB3A1 /* tst-bgr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE365A5F1A659252004AB3A1 /* tst-bgr.jpg */; };
 		DE365A641A659501004AB3A1 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = DE365A631A659501004AB3A1 /* UIImage+ImageEffects.m */; };
 		DE365A671A65A194004AB3A1 /* UIView+UIView_Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE365A661A65A194004AB3A1 /* UIView+UIView_Additions.m */; };
@@ -44,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		330A77AB1A8272B6000EED4A /* SPEventResize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPEventResize.h; sourceTree = "<group>"; };
+		330A77AC1A8272B6000EED4A /* SPEventResize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPEventResize.m; sourceTree = "<group>"; };
+		330A77AE1A8273EA000EED4A /* SPEventResize.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPEventResize.xib; sourceTree = "<group>"; };
 		DE365A5F1A659252004AB3A1 /* tst-bgr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tst-bgr.jpg"; sourceTree = "<group>"; };
 		DE365A621A659501004AB3A1 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		DE365A631A659501004AB3A1 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
@@ -170,6 +175,9 @@
 				DEF9108D1A3A9F8400820513 /* SPEventEditVC.xib */,
 				DEF910A11A3B607E00820513 /* SPEventEditDayVC.h */,
 				DEF910A21A3B607E00820513 /* SPEventEditDayVC.m */,
+				330A77AB1A8272B6000EED4A /* SPEventResize.h */,
+				330A77AC1A8272B6000EED4A /* SPEventResize.m */,
+				330A77AE1A8273EA000EED4A /* SPEventResize.xib */,
 				DEF910A41A3B756400820513 /* SPEventEditDayGrid.h */,
 				DEF910A51A3B756400820513 /* SPEventEditDayGrid.m */,
 				DEF910901A3AA42800820513 /* SPEventEditDayCell.h */,
@@ -290,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEF910711A3A9ED200820513 /* Main.storyboard in Resources */,
+				330A77AF1A8273EA000EED4A /* SPEventResize.xib in Resources */,
 				DEBF428B1A67128900C511E9 /* Paper-top@2x.png in Resources */,
 				DEBF42811A66711F00C511E9 /* Icon_event_to_note.png in Resources */,
 				DEF910761A3A9ED200820513 /* LaunchScreen.xib in Resources */,
@@ -327,6 +336,7 @@
 				DEF910931A3AA42800820513 /* SPEventEditDayCell.m in Sources */,
 				DEF9106B1A3A9ED200820513 /* AppDelegate.m in Sources */,
 				DEF910A31A3B607E00820513 /* SPEventEditDayVC.m in Sources */,
+				330A77AD1A8272B6000EED4A /* SPEventResize.m in Sources */,
 				DEF9108E1A3A9F8400820513 /* SPEventEditVC.m in Sources */,
 				DEF910681A3A9ED200820513 /* main.m in Sources */,
 			);

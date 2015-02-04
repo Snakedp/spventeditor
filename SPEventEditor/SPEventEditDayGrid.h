@@ -23,7 +23,9 @@
 
 #import <UIKit/UIKit.h>
 #import "SPEventEditDayVC.h"
-@interface SPEventEditDayGrid : UIScrollView <UIScrollViewDelegate>
+#import "SPEventResize.h"
+
+@interface SPEventEditDayGrid : UIScrollView <UIScrollViewDelegate, SPEventResizeDelegate>
 {
     CGFloat zoomScale;
     
