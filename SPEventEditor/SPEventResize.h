@@ -33,6 +33,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *tlELbl2;
 @property (weak, nonatomic) IBOutlet UILabel *tlELbl1;
 
+@property (weak, nonatomic) IBOutlet UIView *notePanel;
+
 @property (nonatomic) id<SPEventResizeDelegate> delegate;
 
 +(SPEventResize*) eventResizeInPanel:(UIScrollView*) panel andNote:(NSDictionary *) note;

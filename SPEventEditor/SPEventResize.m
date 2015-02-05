@@ -35,17 +35,42 @@
     
     offsetStart = [self.delegate offsetByTime: tS];
     offsetEnd   = [self.delegate offsetByTime: tE];
+
+    CGRect frm;
+    CGFloat paddingOffset = 70;
+    CGRect screenRect = self.bounds;//[[UIScreen mainScreen] bounds];
     
-    CGRect frm = self.timeLineStartPanel.frame;
-    frm.origin.y = offsetStart - frm.size.height/2;
+    frm.origin.x = paddingOffset;
+    frm.origin.y = offsetStart;
+    frm.size.width = screenRect.size.width - (paddingOffset*2);
+    frm.size.height = offsetEnd - offsetStart;
+    
+    self.notePanel.frame = frm;
+    
+    
+    frm.origin.y = offsetStart - 10 - 2;
     frm.origin.x = 0;
+    frm.size.width = screenRect.size.width - paddingOffset;
+    frm.size.height = 20;
+
     self.timeLineStartPanel.frame = frm;
 
-            frm = self.timeLineEndPanel.frame;
-    frm.origin.y = offsetEnd - frm.size.height/2;
-    frm.origin.x = 0;
+    
+    frm.origin.y = offsetEnd - 10 - 1;
+    frm.origin.x = paddingOffset-2;
+    frm.size.width = screenRect.size.width - paddingOffset;
+    frm.size.height = 20;
+    
     self.timeLineEndPanel.frame = frm;
 
+
+    self.tlSLbl1.text = self.tlSLbl2.text = tS;
+    self.tlELbl1.text = self.tlELbl2.text = tE;
+    
+    
+    
+    self.tlSLbl1.layer.cornerRadius  = self.tlSLbl2.layer.cornerRadius  = self.tlELbl1.layer.cornerRadius  = self.tlELbl2.layer.cornerRadius = 5;
+    self.tlSLbl1.layer.masksToBounds = self.tlSLbl2.layer.masksToBounds = self.tlELbl1.layer.masksToBounds = self.tlELbl2.layer.masksToBounds = YES;
     
 }
 

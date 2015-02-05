@@ -80,13 +80,15 @@
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 
-    [self prepareToShow];
+    
     
 }
 
 
 -(void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    
+    [self prepareToShow];
     
     [UIView animateWithDuration:0.3
                      animations:^{
