@@ -12,6 +12,7 @@
 
 - (CGFloat)     offsetByTime:(NSString *) time;
 - (NSString *)  timeByOffset:(CGFloat)    offset;
+- (void)        showTimeFrom:(NSString*) start to:(NSString *) end;
 
 @optional
 
@@ -37,6 +38,8 @@
 
 @property (nonatomic) id<SPEventResizeDelegate> delegate;
 
+
 +(SPEventResize*) eventResizeInPanel:(UIScrollView*) panel andNote:(NSDictionary *) note;
+-(void) layout;
 
 @end

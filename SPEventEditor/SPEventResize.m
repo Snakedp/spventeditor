@@ -18,20 +18,18 @@
     
     [panel addSubview: instance ];
     
-    
     instance.delegate = (UIScrollView<SPEventResizeDelegate>* )panel;
     
-    [instance layout];
-    
     return instance;
-    
 }
 
 
 -(void) layout{
 
     NSString * tS = @"10:00";
-    NSString * tE = @"12:00";
+    NSString * tE = @"16:15";
+    
+    [self.delegate showTimeFrom:tS to:tE];   
     
     offsetStart = [self.delegate offsetByTime: tS];
     offsetEnd   = [self.delegate offsetByTime: tE];
@@ -68,9 +66,10 @@
     self.tlELbl1.text = self.tlELbl2.text = tE;
     
     
-    
     self.tlSLbl1.layer.cornerRadius  = self.tlSLbl2.layer.cornerRadius  = self.tlELbl1.layer.cornerRadius  = self.tlELbl2.layer.cornerRadius = 5;
     self.tlSLbl1.layer.masksToBounds = self.tlSLbl2.layer.masksToBounds = self.tlELbl1.layer.masksToBounds = self.tlELbl2.layer.masksToBounds = YES;
+    
+
     
 }
 

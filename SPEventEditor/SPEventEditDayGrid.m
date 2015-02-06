@@ -10,6 +10,7 @@
 
 @implementation SPEventEditDayGrid
 
+
 +(SPEventEditDayGrid *) dayGridIn:(UIView *) panel andZoomScale:(CGFloat) zoomScale{
     
    SPEventEditDayGrid *dayGrid = [[SPEventEditDayGrid alloc] initWithFrame:panel.bounds];
@@ -136,6 +137,7 @@
         self.calendarGrid = nil;
     }
     
+    gridImage = nil;
     
     self.calendarGrid = [[UIImageView alloc] initWithImage: self.gridImage ];
     
@@ -459,10 +461,10 @@
     
     NSArray * t = [time componentsSeparatedByString:@":"];
     
-    int hrs = [t[0] integerValue];
-    int min = [t[1] integerValue];
+    long hrs = [t[0] integerValue];
+    long min = [t[1] integerValue];
     
-    int minutes = hrs * 60 + min;
+    long minutes = hrs * 60 + min;
     
     return (minutes / self.zoomScale) * CAL_ROW_HEIGHT + CAL_BOUNDS_OFFSET;
 }
@@ -470,6 +472,39 @@
 
 - (NSString *)  timeByOffset:(CGFloat)    offset{
     return [self timeByY: offset];
+}
+
+
+-(void) showTimeFrom:(NSString *)start to:(NSString *)end{
+
+    CGFloat sP = [self offsetByTime: start ];
+    CGFloat eP = [self offsetByTime: end ];
+    CGFloat  h = self.bounds.size.height;
+    
+    if(eP - sP <  h - CAL_BOUNDS_OFFSET - 20 )
+    {
+        CGFloat middle = sP - (h-(eP-sP ))/2 ;
+        
+        self.contentOffset = CGPointMake(0, middle );
+    }
+    
+    else{
+        
+        if( self.zoomScale >= 60)
+        {
+           self.contentOffset = CGPointMake(0, sP );
+            return;
+        }
+        
+        CGFloat zS =  zoomScale + 15;
+        
+        [self.delegateUP updateGridByScale: zS ];
+        [self showTimeFrom: start to:end];
+        
+    }
+
+    
+    
 }
 
 

@@ -21,8 +21,9 @@
 @optional
  - (void) dayGridScroll:(CGFloat) offset;
  - (void) dayGridChangeDate:(NSDate*) date;
-
  - (void) timeGridScroll:(CGFloat ) offset;
+- (void) updateGridByScale:(CGFloat) scale;
+
 @end
 
 @class SPEventEditDayGrid;
@@ -54,6 +55,9 @@
     
 }
 
+@property (strong, nonatomic)     SPEventEditDayGrid  * grid;
+@property (strong, nonatomic)     SPEventResize * event;
+
 @property (weak, nonatomic) IBOutlet UIButton * btnNext;
 @property (weak, nonatomic) IBOutlet UIButton * btnPrev;
 @property (weak, nonatomic) IBOutlet UIView   * buzzyLineContainer;
@@ -66,6 +70,8 @@
 
 //- (SPEventEditVC*)initWithDate:(NSDate*)date;
 - (void) scrollToCurrent;
+
+- (void) show;
 
 + (SPEventEditDayVC *) daysCollectionViewIn: (UIView*) panel
                                     andDate:(NSDate *) date

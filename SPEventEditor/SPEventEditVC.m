@@ -72,6 +72,7 @@
     [self.panelUI       setAnimatedAlpha:1 comletion:^(BOOL finished) {
         [self.panelCalendar setAnimatedAlpha:1];
         [self dayGridChangeDate: date ];
+        [dayVC show];
     }];
     
     
@@ -80,15 +81,13 @@
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 
-    
+    [self prepareToShow];
     
 }
 
 
 -(void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    
-    [self prepareToShow];
     
     [UIView animateWithDuration:0.3
                      animations:^{
@@ -118,9 +117,9 @@
 
 - (IBAction)actEvntEnbl:(id)sender {
 
-    NSLog(@"time:%@", [dayVC timeByGridY: 100 ]);
+//    NSLog(@"time:%@", [dayVC timeByGridY: 100 ]);
     
-//    [dayVC updateTimeGridScale: 60 ];
+    [dayVC updateTimeGridScale: 60 ];
     
 }
 
@@ -167,7 +166,18 @@
 }
 
 
-
+- (void) updateGridByScale:(CGFloat) scale{
+    
+    id grid = dayVC.grid;
+    
+    [grid setZoomScale: scale ];
+    
+    [dayVC.collectionView reloadData];
+    
+    [dayVC.event removeFromSuperview];
+    [dayVC.grid addSubview: dayVC.event];
+    
+}
 
 
 

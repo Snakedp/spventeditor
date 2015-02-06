@@ -14,6 +14,7 @@
 @end
 
 @implementation SPEventEditDayVC
+@synthesize grid, event;
 
 static NSString * const reuseIdentifier = @"dayCell";
 
@@ -85,6 +86,14 @@ static NSString * const reuseIdentifier = @"dayCell";
     [self.collectionView performBatchUpdates:nil completion:nil];
     [self.collectionView reloadData];
 }
+
+
+- (void) show{
+    
+    [event layout];
+    
+}
+
 
 #pragma mark -
 #pragma mark UICollectionViewDelegate
@@ -358,9 +367,8 @@ static NSString * const reuseIdentifier = @"dayCell";
 
 -(void) updateTimeGridScale:(CGFloat) scale{
     
-    grid.zoomScale = scale;
-
-    [self.collectionView reloadData];
+    [self.delegate updateGridByScale: scale];
+    [event layout];
 }
 
 
