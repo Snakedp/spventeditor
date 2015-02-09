@@ -19,9 +19,11 @@
     
     NSDate * date;
     
+    CGFloat delta;
 }
 
 
+@property (nonatomic) NSDictionary * note;
 
 @property (weak, nonatomic) IBOutlet UIView *panelBgr;
 @property (weak, nonatomic) IBOutlet UIView *panelCalendar;

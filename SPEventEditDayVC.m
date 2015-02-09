@@ -21,8 +21,8 @@ static NSString * const reuseIdentifier = @"dayCell";
 
 
 + (SPEventEditDayVC *) daysCollectionViewIn: (UIView*) panel
-                                    andDate:(NSDate *) date
-                               withDelegate:(id <SPEventEditDayDelegate>) delegate{
+                               withDelegate:(id <SPEventEditDayDelegate>) delegate
+                                    andNote:(NSDictionary *) note {
     
     UICollectionViewFlowLayout *aFlowLayout = [[UICollectionViewFlowLayout alloc] init];
     [aFlowLayout setItemSize:panel.bounds.size];
@@ -41,10 +41,16 @@ static NSString * const reuseIdentifier = @"dayCell";
     
     [instance->grid addSubview: instance.collectionView];
     
-    instance.date = date;
     
     
-    instance->event = [SPEventResize eventResizeInPanel: instance->grid andNote:nil];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+//    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"]];
+    instance.date = [dateFormatter dateFromString: note[@"event_startDate"]];
+
+
+    
+    instance.event = [SPEventResize eventResizeInPanel: instance->grid andNote: note ];
     return instance;
 }
 
@@ -200,6 +206,8 @@ static NSString * const reuseIdentifier = @"dayCell";
 
 #pragma mark -
 #pragma mark WorkFlow Methods
+
+
 
 -(void) setDate:(NSDate *)d{
     
@@ -374,15 +382,11 @@ static NSString * const reuseIdentifier = @"dayCell";
 
 -(NSString *) timeByGridY:(CGFloat) y{
 
-    y = 0;
-    
-
-    y += CAL_BOUNDS_OFFSET;
+//    y += CAL_BOUNDS_OFFSET;
 //        UIView * tst = [[UIView alloc] initWithFrame: CGRectMake(0, y, 200, 1)];
 //        tst.backgroundColor = [UIColor redColor];
 //        [grid addSubview: tst];
-
-    y+= grid.contentOffset.y;
+//    y+= grid.contentOffset.y;
 
     return [grid timeByY: y ];
     

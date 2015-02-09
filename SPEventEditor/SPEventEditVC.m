@@ -27,6 +27,9 @@
     
     instance->date = [NSDate date];
     
+    instance.note = note;
+
+    
     [vc presentViewController: instance animated:NO
                      completion:^{ }];
     
@@ -58,8 +61,8 @@
     if( !dayVC )
     {
         dayVC = [SPEventEditDayVC daysCollectionViewIn: self.panelCalendar
-                                               andDate: date
-                                          withDelegate: self ];
+                                          withDelegate: self
+                                               andNote: self.note];
     }
     
 }
@@ -146,12 +149,13 @@
 - (void) dayGridScroll:(CGFloat) offset{
     
     if(offset>292) offset= 584-offset;
+    if(offset==0)  offset=292;
     if(offset<1)   offset=1;
     
     
     CGFloat a = offset/292.00;
     
-//    NSLog(@"%.02f Day nyScroll: %.02f",a, offset);
+    NSLog(@"%.02f Day nyScroll: %.02f",a, offset);
     
     self.lblDayDate.alpha=a;
     
@@ -160,8 +164,28 @@
 
 -(void) timeGridScroll:(CGFloat)offset{
     
-    NSLog(@"%@", [dayVC timeByGridY: offset ] );
-//    NSLog(@"Time Scroll: %.02f", offset);
+
+    
+//   if(delta < 15 && delta >0)
+//       delta = 15;
+//   
+//    if(delta > -15 && delta <0)
+//        delta = -15;
+    
+    if( dayVC.event.scrollMode )
+    {
+
+        NSMutableDictionary * newNote = [self.note mutableCopy];
+        newNote[@"event_startTime"] = [dayVC timeByGridY: offset + delta  ];
+        
+        self.note = [newNote copy];
+        dayVC.event.note = self.note;
+        [dayVC.event layout];
+
+    }
+    else
+     delta = dayVC.event.timeLineStartPanel.frame.origin.y - offset;
+
 
 }
 

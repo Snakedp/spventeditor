@@ -29,7 +29,13 @@
 
 - (IBAction)actionOpenEditor:(id)sender {
 
-    [SPEventEditVC editEvent:@{} presentedBy:self];
+    NSDictionary * note = @{
+                            @"event_startTime":@"10:00",
+                            @"event_duration":@"120",
+                            @"event_startDate" : @"2015-02-09",
+                            @"message": @"test! note!"};
+    
+    [SPEventEditVC editEvent:note presentedBy:self];
 
 }
 

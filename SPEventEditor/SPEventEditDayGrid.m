@@ -290,7 +290,7 @@
 
 -(NSString *) timeByY:(CGFloat) y{
     
-    y-=CAL_BOUNDS_OFFSET;
+//    y-=CAL_BOUNDS_OFFSET;
     
     int x = (y/CAL_ROW_HEIGHT)*zoomScale;
 
@@ -466,7 +466,7 @@
     
     long minutes = hrs * 60 + min;
     
-    return (minutes / self.zoomScale) * CAL_ROW_HEIGHT + CAL_BOUNDS_OFFSET;
+    return (minutes / self.zoomScale) * CAL_ROW_HEIGHT;// + CAL_BOUNDS_OFFSET;
 }
 
 

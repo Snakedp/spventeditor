@@ -23,9 +23,17 @@
     
     CGFloat offsetStart;
     CGFloat offsetEnd;
+    NSDictionary * note;
+    BOOL scrollMode;
     
-    
+    NSString * tS;
+    NSString * tE;
 }
+
+@property (nonatomic, weak) NSDictionary * note;
+
+@property (nonatomic) BOOL scrollMode;
+
 @property (weak, nonatomic) IBOutlet UIView *timeLineStartPanel;
 @property (weak, nonatomic) IBOutlet UILabel *tlSLbl2;
 @property (weak, nonatomic) IBOutlet UILabel *tlSLbl1;

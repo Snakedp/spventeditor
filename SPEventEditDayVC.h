@@ -74,8 +74,8 @@
 - (void) show;
 
 + (SPEventEditDayVC *) daysCollectionViewIn: (UIView*) panel
-                                    andDate:(NSDate *) date
-                               withDelegate:(id <SPEventEditDayDelegate>) delegate;
+                               withDelegate:(id <SPEventEditDayDelegate>) delegate
+                                    andNote:(NSDictionary *) note;
 
 -(void) updateTimeGridScale:(CGFloat) scale;
 -(NSString *) timeByGridY:(CGFloat) y;
