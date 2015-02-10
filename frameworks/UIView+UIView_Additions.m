@@ -19,20 +19,75 @@
 @implementation UIView (UIView_Additions)
 
 -(void)setShadow:(BOOL)shadow {
-    if (shadow) {
+    
+    NSArray * params;
+    
+    if ( shadow ) {
+        
         self.layer.masksToBounds = NO;
-        //        self.layer.shadowOffset = CGSizeMake(-15, 20);
-        self.layer.shadowRadius = 3;
-        self.layer.shadowOpacity = 0.3;
+        
+        params = @[@(-3),@2,@3, @0.5];
+
     } else {
-        self.layer.shadowRadius = 0;
-        self.layer.shadowOpacity = 0;
+       params = @[@0,@0,@0, @0];
     }
+    
+    [self customShadow: params ];
 }
 
 -(BOOL)shadow {
     return self.layer.shadowRadius != 0;
 }
+
+-(void) customShadow:(NSArray *) params {
+    
+    //params = @[ offSetX, offSetY, radus, alpha ]
+    
+    self.layer.shadowOffset = CGSizeMake( [params[0] floatValue] ,  [params[1] floatValue] );
+    self.layer.shadowRadius = [params[2]  floatValue];
+    self.layer.shadowOpacity = [params[3] floatValue];
+
+}
+
+-(void) moveByDeltaX:(CGFloat ) x andY:(CGFloat) y  comletion:(void (^)(BOOL finished))completion{
+    
+    CGRect frm = self.frame;
+    
+    frm.origin.x += x;
+    frm.origin.y += y;
+    
+    if(completion == nil)
+     self.frame = frm;
+    
+    else
+    [UIView animateWithDuration:0.2
+                     animations:^{
+                         self.frame = frm;
+                     } completion: completion];
+
+    
+}
+
+
+-(void) resizeByDeltaW:(CGFloat ) w andH:(CGFloat) h  comletion:(void (^)(BOOL finished))completion{
+    
+    CGRect frm = self.frame;
+    
+    frm.size.width += w;
+    frm.size.height += h;
+    
+    if(completion == nil)
+        self.frame = frm;
+    
+    else
+        [UIView animateWithDuration:0.2
+                         animations:^{
+                             self.frame = frm;
+                         } completion: completion];
+    
+    
+}
+
 
 -(void)setAnimatedAlpha:(CGFloat)alpha {
     [UIView animateWithDuration:0.3

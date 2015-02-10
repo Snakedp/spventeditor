@@ -292,12 +292,18 @@
     
 //    y-=CAL_BOUNDS_OFFSET;
     
-    int x = (y/CAL_ROW_HEIGHT)*zoomScale;
+    int x = (y/CAL_ROW_HEIGHT)*zoomScale * 60;
 
-    int min = abs(floor( x % 60 ));  x /= 60;
-    int hrs = abs(floor( x % 24 ));  x /= 24;
-
-    return [self timeTitleFor:hrs andMin:min];
+//    int min = abs(floor( x % 60 ));  x /= 60;
+//    int hrs = abs(floor( x % 24 ));  x /= 24;
+//
+//    NSLog(@"min:%d min/5:%d min/5*5:%d",min, min/5, min/5 *5 );
+//
+//    min = (min%5<2)? min/5 *5 : min/5*5+1;
+    
+    
+    
+    return [@(x) timeFromSeconds];
 }
 
 
@@ -466,12 +472,15 @@
     
     long minutes = hrs * 60 + min;
     
-    return (minutes / self.zoomScale) * CAL_ROW_HEIGHT;// + CAL_BOUNDS_OFFSET;
+    CGFloat f = (minutes / self.zoomScale) * CAL_ROW_HEIGHT;
+    
+    return f + CAL_BOUNDS_OFFSET;
 }
 
 
 - (NSString *)  timeByOffset:(CGFloat)    offset{
-    return [self timeByY: offset];
+
+    return [self timeByY: offset - CAL_BOUNDS_OFFSET];
 }
 
 

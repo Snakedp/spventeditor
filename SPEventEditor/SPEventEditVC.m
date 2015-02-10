@@ -164,27 +164,21 @@
 
 -(void) timeGridScroll:(CGFloat)offset{
     
-
-    
-//   if(delta < 15 && delta >0)
-//       delta = 15;
-//   
-//    if(delta > -15 && delta <0)
-//        delta = -15;
-    
     if( dayVC.event.scrollMode )
     {
 
-        NSMutableDictionary * newNote = [self.note mutableCopy];
-        newNote[@"event_startTime"] = [dayVC timeByGridY: offset + delta  ];
+//        NSMutableDictionary * newNote = [dayVC.event.note mutableCopy];
+//        newNote[@"event_startTime"] = [dayVC timeByGridY: offset + delta  ];
+//        
+//        self.note = [newNote copy];
+//        dayVC.event.note = self.note;
+//        [dayVC.event layout];
         
-        self.note = [newNote copy];
-        dayVC.event.note = self.note;
-        [dayVC.event layout];
+        [dayVC.event moveByDeltaY: offset - gridOffset ];
 
     }
-    else
-     delta = dayVC.event.timeLineStartPanel.frame.origin.y - offset;
+    
+    gridOffset = offset;
 
 
 }

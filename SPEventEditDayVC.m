@@ -51,6 +51,9 @@ static NSString * const reuseIdentifier = @"dayCell";
 
     
     instance.event = [SPEventResize eventResizeInPanel: instance->grid andNote: note ];
+    
+
+    
     return instance;
 }
 
@@ -80,7 +83,12 @@ static NSString * const reuseIdentifier = @"dayCell";
     UIViewAutoresizingFlexibleLeftMargin |
     UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     
+
+
+    
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -96,8 +104,13 @@ static NSString * const reuseIdentifier = @"dayCell";
 
 - (void) show{
     
-    [event layout];
+    [self.grid addSubview: event.notePanel ];
     
+    [self.grid addSubview: event.timeLineStartPanel ];
+    [self.grid addSubview: event.timeLineEndPanel ];
+    
+    [event layout];
+
 }
 
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		330A77AD1A8272B6000EED4A /* SPEventResize.m in Sources */ = {isa = PBXBuildFile; fileRef = 330A77AC1A8272B6000EED4A /* SPEventResize.m */; };
 		330A77AF1A8273EA000EED4A /* SPEventResize.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330A77AE1A8273EA000EED4A /* SPEventResize.xib */; };
+		33968C3E1A8A9E1E00F79565 /* NSNumber+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 33968C3D1A8A9E1E00F79565 /* NSNumber+Additions.m */; };
 		DE365A601A659252004AB3A1 /* tst-bgr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE365A5F1A659252004AB3A1 /* tst-bgr.jpg */; };
 		DE365A641A659501004AB3A1 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = DE365A631A659501004AB3A1 /* UIImage+ImageEffects.m */; };
 		DE365A671A65A194004AB3A1 /* UIView+UIView_Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE365A661A65A194004AB3A1 /* UIView+UIView_Additions.m */; };
@@ -49,6 +50,8 @@
 		330A77AB1A8272B6000EED4A /* SPEventResize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPEventResize.h; sourceTree = "<group>"; };
 		330A77AC1A8272B6000EED4A /* SPEventResize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPEventResize.m; sourceTree = "<group>"; };
 		330A77AE1A8273EA000EED4A /* SPEventResize.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPEventResize.xib; sourceTree = "<group>"; };
+		33968C3C1A8A9E1E00F79565 /* NSNumber+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+Additions.h"; path = "frameworks/NSNumber+Additions.h"; sourceTree = SOURCE_ROOT; };
+		33968C3D1A8A9E1E00F79565 /* NSNumber+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+Additions.m"; path = "frameworks/NSNumber+Additions.m"; sourceTree = SOURCE_ROOT; };
 		DE365A5F1A659252004AB3A1 /* tst-bgr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tst-bgr.jpg"; sourceTree = "<group>"; };
 		DE365A621A659501004AB3A1 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		DE365A631A659501004AB3A1 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 				DE365A661A65A194004AB3A1 /* UIView+UIView_Additions.m */,
 				DEBF42901A67DAF700C511E9 /* NSDate+Extention.h */,
 				DEBF42911A67DAF700C511E9 /* NSDate+Extention.m */,
+				33968C3C1A8A9E1E00F79565 /* NSNumber+Additions.h */,
+				33968C3D1A8A9E1E00F79565 /* NSNumber+Additions.m */,
 			);
 			path = frameworks;
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 				330A77AD1A8272B6000EED4A /* SPEventResize.m in Sources */,
 				DEF9108E1A3A9F8400820513 /* SPEventEditVC.m in Sources */,
 				DEF910681A3A9ED200820513 /* main.m in Sources */,
+				33968C3E1A8A9E1E00F79565 /* NSNumber+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

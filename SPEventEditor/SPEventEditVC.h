@@ -19,7 +19,7 @@
     
     NSDate * date;
     
-    CGFloat delta;
+    CGFloat gridOffset;
 }
 
 
