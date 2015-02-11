@@ -480,7 +480,7 @@
 
 - (NSString *)  timeByOffset:(CGFloat)    offset{
 
-    return [self timeByY: offset - CAL_BOUNDS_OFFSET];
+    return [self timeByY: offset - CAL_BOUNDS_OFFSET/2 -3];
 }
 
 

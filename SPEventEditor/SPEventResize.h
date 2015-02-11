@@ -11,9 +11,9 @@
 #import "NSNumber+Additions.h"
 
 #define EVENT_SCROLL_X_OFFSET 3
-#define EVENT_SCROLL_Y_OFFSET -5
+#define EVENT_SCROLL_Y_OFFSET 1
 #define EVENT_MIN_DURATION 15
-#define EVENT_MAX_DURATION 1200
+#define EVENT_MAX_DURATION 1400
 
 @protocol SPEventResizeDelegate <NSObject>
 
