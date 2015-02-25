@@ -125,6 +125,8 @@
     [dayVC updateTimeGridScale: 60 ];
     
 }
+- (IBAction)actAlarmMenu:(id)sender {
+}
 
 #pragma mark - 
 #pragma mark SPEventEditDayDelegate Methods
