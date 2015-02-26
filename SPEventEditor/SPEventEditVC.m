@@ -134,6 +134,63 @@
     [dayVC updateTimeGridScale: 60 ];
     
 }
+
+- (IBAction)actAlarmMenu:(UIButton *)sender {
+    
+    NSArray * state=@[@0,@1,@0,@0];
+    
+    
+    NSDictionary * config=@{
+                            MENU_TITLE: @"Установите напоминания:",
+                            
+                            MENU_DESCRIPTION:@"",
+                            
+                            MENU_BUTTON_CANCEL:@(YES),
+                            
+                            MENU_ITEMS: @[
+                                    @{
+                                        ITEM_TITLE      :@"Во время события",
+                                        ITEM_IMG        :@"i-01"
+                                        },
+                                    @{
+                                        ITEM_TITLE      :@"за 5 минут",
+                                        ITEM_IMG        :@"i-02"
+                                        },
+                                    @{
+                                        ITEM_TITLE      :@"за 15 минут",
+                                        ITEM_IMG        :@"i-03"
+                                        },
+                                    @{
+                                        ITEM_TITLE      :@"за 30 минут",
+                                        ITEM_IMG        :@"i-04"
+                                        },
+                                    @{
+                                        ITEM_TITLE      :@"за 1 час",
+                                        ITEM_IMG        :@"i-05"
+                                        },
+                                    @{
+                                        ITEM_TITLE      :@"за 2 часа",
+                                        ITEM_IMG        :@"i-06"
+                                        },
+                                    @{
+                                        ITEM_TITLE      :@"за 3 часа",
+                                        ITEM_IMG        :@"i-07"
+                                        },
+                                    @{
+                                        ITEM_TITLE      :@"за сутки",
+                                        ITEM_IMG        :@"i-08"
+                                        }
+                                    ]
+                            };
+    
+    
+    
+    
+    [SPListMenuVC showMenu:config withState:state inParent:self inPoint:sender.center];
+    
+}
+
+
 - (IBAction)actCancelBtn:(id)sender {
     
     CGRect frm = CGRectMake(-50, 0, 100, 2000);
@@ -162,6 +219,7 @@
     
     
 }
+
 
 #pragma mark -
 #pragma mark SPEventEditDayDelegate Methods
