@@ -20,6 +20,8 @@
     NSDate * date;
     
     CGFloat gridOffset;
+    
+    BOOL isShow;
 }
 
 

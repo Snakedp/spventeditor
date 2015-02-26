@@ -9,6 +9,7 @@
 #import "SPEventEditVC.h"
 #import "UIView+UIView_Additions.h"
 #import "NSDate+Extention.h"
+#import "SPListMenuVC.h"
 
 @interface SPEventEditVC ()
 
@@ -29,6 +30,7 @@
     
     instance.note = note;
 
+    instance->isShow = NO;
     
     [vc presentViewController: instance animated:NO
                      completion:^{ }];
@@ -84,20 +86,27 @@
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 
-    [self prepareToShow];
-    
+    if(!isShow ){
+     [self prepareToShow];
+    }
 }
 
 
 -(void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    [UIView animateWithDuration:0.3
-                     animations:^{
-                         [bgrSnapshot setAlpha:0];
-                     } completion:^(BOOL finished) {
-                         [self show];
-                     }];
+    if(!isShow){
+        
+        isShow = YES;
+        
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             [bgrSnapshot setAlpha:0];
+                         } completion:^(BOOL finished) {
+                             [self show];
+                         }];
+    }
+
 
 
 }
@@ -125,10 +134,62 @@
     [dayVC updateTimeGridScale: 60 ];
     
 }
-- (IBAction)actAlarmMenu:(id)sender {
+- (IBAction)actAlarmMenu:(UIButton *)sender {
+    
+    NSArray * state=@[@0,@1,@0,@0];
+    
+    
+    NSDictionary * config=@{
+             MENU_TITLE: @"Установите напоминания:",
+             
+             MENU_DESCRIPTION:@"",
+             
+             MENU_BUTTON_CANCEL:@(YES),
+             
+             MENU_ITEMS: @[
+                     @{
+                         ITEM_TITLE      :@"Во время события",
+                         ITEM_IMG        :@"i-01"
+                         },
+                     @{
+                         ITEM_TITLE      :@"за 5 минут",
+                         ITEM_IMG        :@"i-02"
+                         },
+                     @{
+                         ITEM_TITLE      :@"за 15 минут",
+                         ITEM_IMG        :@"i-03"
+                         },
+                     @{
+                         ITEM_TITLE      :@"за 30 минут",
+                         ITEM_IMG        :@"i-04"
+                         },
+                     @{
+                         ITEM_TITLE      :@"за 1 час",
+                         ITEM_IMG        :@"i-05"
+                         },
+                     @{
+                         ITEM_TITLE      :@"за 2 часа",
+                         ITEM_IMG        :@"i-06"
+                         },
+                     @{
+                         ITEM_TITLE      :@"за 3 часа",
+                         ITEM_IMG        :@"i-07"
+                         },
+                     @{
+                         ITEM_TITLE      :@"за сутки",
+                         ITEM_IMG        :@"i-08"
+                         }
+                     ]
+             };
+    
+
+    
+    
+    [SPListMenuVC showMenu:config withState:state inParent:self inPoint:sender.center];
+    
 }
 
-#pragma mark - 
+#pragma mark -
 #pragma mark SPEventEditDayDelegate Methods
 
 - (void) dayGridChangeDate:(NSDate*) newDate
