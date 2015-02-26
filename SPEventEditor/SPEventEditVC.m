@@ -9,6 +9,7 @@
 #import "SPEventEditVC.h"
 #import "UIView+UIView_Additions.h"
 #import "NSDate+Extention.h"
+#import "SPListMenuVC.h"
 
 @interface SPEventEditVC ()
 
@@ -29,6 +30,7 @@
     
     instance.note = note;
 
+    instance->isShow = NO;
     
     [vc presentViewController: instance animated:NO
                      completion:^{ }];
@@ -84,20 +86,27 @@
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 
-    [self prepareToShow];
-    
+    if(!isShow ){
+     [self prepareToShow];
+    }
 }
 
 
 -(void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    [UIView animateWithDuration:0.3
-                     animations:^{
-                         [bgrSnapshot setAlpha:0];
-                     } completion:^(BOOL finished) {
-                         [self show];
-                     }];
+    if(!isShow){
+        
+        isShow = YES;
+        
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             [bgrSnapshot setAlpha:0];
+                         } completion:^(BOOL finished) {
+                             [self show];
+                         }];
+    }
+
 
 
 }
@@ -154,7 +163,7 @@
     
 }
 
-#pragma mark - 
+#pragma mark -
 #pragma mark SPEventEditDayDelegate Methods
 
 - (void) dayGridChangeDate:(NSDate*) newDate

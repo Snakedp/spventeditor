@@ -105,6 +105,16 @@
                             <color key="textColor" red="0.95136916039999997" green="0.95136916039999997" blue="0.95136916039999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gQm-jP-78h">
+                            <rect key="frame" x="19" y="415" width="282" height="43"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="actAlarmMenu:" destination="-1" eventType="touchUpInside" id="Ec6-oC-ysR"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </scrollView>
             </subviews>
