@@ -59,7 +59,10 @@
 
 
 +(SPEventResize*) eventResizeInPanel:(UIScrollView*) panel andNote:(NSDictionary *) note;
+-(void) addToView:(UIView *) view;
 -(void) layout;
 -(void) moveByDeltaY:(CGFloat)y;
+-(void) moveStartByDeltaY:(CGFloat)y;
+-(void) moveEndByDeltaY:(CGFloat)y;
 
 @end

@@ -34,7 +34,9 @@
 
     UIPanGestureRecognizer * panEndGR = [[UIPanGestureRecognizer alloc] initWithTarget:instance action:@selector( panEndTimeLabel: )];
     [instance.timeLineEndPanel addGestureRecognizer: panEndGR ];
-    
+
+    [instance removeFromSuperview];
+        
     return instance;
 }
 
@@ -57,10 +59,31 @@
 //    }
 //}
 
+-(void) removeFromSuperview{
+    [super removeFromSuperview];
+    
+    [self.notePanel removeFromSuperview];
+    [self.timeLineStartPanel removeFromSuperview];
+    [self.timeLineEndPanel removeFromSuperview];
+}
+
+-(void) addToView:(UIView *) view{
+
+//    if(self.notePanel.superview == nil)
+     [view addSubview: self.notePanel ];
+    
+//    if(self.timeLineStartPanel.superview == nil)
+     [view addSubview: self.timeLineStartPanel ];
+    
+//    if(self.timeLineEndPanel.superview == nil)
+     [view addSubview: self.timeLineEndPanel ];
+    
+}
+
 
 -(void) panNote:(UIPanGestureRecognizer *)sender{
     
-    if(!self.scrollMode) return;
+ //   if(!self.scrollMode) return;
     
     CGPoint translation = [sender translationInView:[self superview]];
     

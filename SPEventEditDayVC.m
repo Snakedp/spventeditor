@@ -53,10 +53,61 @@ static NSString * const reuseIdentifier = @"dayCell";
     instance.event = [SPEventResize eventResizeInPanel: instance->grid andNote: note ];
     
 
+    UILongPressGestureRecognizer * longPressGR = [[UILongPressGestureRecognizer alloc] initWithTarget:instance action:@selector( longPressHandle: )];
+    [longPressGR setMinimumPressDuration:0.3];
+    [instance.grid addGestureRecognizer: longPressGR ];
+
+    
     
     return instance;
 }
 
+
+-(void) longPressHandle: (UILongPressGestureRecognizer*) sender{
+    
+    if(sender.state == UIGestureRecognizerStateBegan)
+    {
+        CGPoint point = [sender locationInView:self.grid];
+        CGFloat y = point.y - CAL_BOUNDS_OFFSET;
+        
+        NSArray * timeArr = [[self.grid timeByY: y ]  componentsSeparatedByString:@":"];
+        
+        NSInteger min = [timeArr[1] integerValue];
+
+        min = (min%5 == 0)? min : (min%5 <= 2)? (min/5)*5: (min%5 >2 )? (min/5)*5 + 5: min;
+
+        
+        NSString * time= [NSString stringWithFormat:@"%@:%lu",timeArr[0],min ];
+        
+        y = [self.grid  offsetByTime: time];
+        
+        NSLog(@"%@:%@ -> %@", timeArr[0], timeArr[1], time );
+        
+        
+        if( point.x<= 40 && point.y < self.event.timeLineEndPanel.frame.origin.y + CAL_ROW_HEIGHT )
+        {
+            
+            [self.event moveStartByDeltaY: y - (self.event.timeLineStartPanel.frame.origin.y + self.event.timeLineStartPanel.frame.size.height/2) - 2 ];
+        }
+        
+        if( point.x<= 40 && point.y > self.event.timeLineEndPanel.frame.origin.y )
+        {
+            [self.event moveByDeltaY: y - (self.event.timeLineStartPanel.frame.origin.y  + self.event.timeLineStartPanel.frame.size.height/2) - 2 ];
+        }
+    
+        
+        if( point.x>=200 && point.y > self.event.timeLineStartPanel.frame.origin.y + CAL_ROW_HEIGHT )
+        {
+            [self.event moveEndByDeltaY: y - (self.event.timeLineEndPanel.frame.origin.y + self.event.timeLineEndPanel.frame.size.height/2) - 2 ];
+        }
+        
+        if( point.x>=200 && point.y < self.event.timeLineStartPanel.frame.origin.y )
+        {
+            [self.event moveByDeltaY: y - (self.event.timeLineEndPanel.frame.origin.y+ self.event.timeLineEndPanel.frame.size.height/2) - 2];
+        }
+    
+    }
+}
 
 
 - (void)viewDidLoad {
@@ -104,11 +155,7 @@ static NSString * const reuseIdentifier = @"dayCell";
 
 - (void) show{
     
-    [self.grid addSubview: event.notePanel ];
-    
-    [self.grid addSubview: event.timeLineStartPanel ];
-    [self.grid addSubview: event.timeLineEndPanel ];
-    
+    [event addToView: self.grid ];
     [event layout];
 
 }

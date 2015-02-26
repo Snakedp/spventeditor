@@ -10,6 +10,7 @@
 		330A77AD1A8272B6000EED4A /* SPEventResize.m in Sources */ = {isa = PBXBuildFile; fileRef = 330A77AC1A8272B6000EED4A /* SPEventResize.m */; };
 		330A77AF1A8273EA000EED4A /* SPEventResize.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330A77AE1A8273EA000EED4A /* SPEventResize.xib */; };
 		33968C3E1A8A9E1E00F79565 /* NSNumber+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 33968C3D1A8A9E1E00F79565 /* NSNumber+Additions.m */; };
+		33EE809A1A9609EF002F0216 /* SPCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EE80991A9609EF002F0216 /* SPCalendarDayView.m */; };
 		DE365A601A659252004AB3A1 /* tst-bgr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE365A5F1A659252004AB3A1 /* tst-bgr.jpg */; };
 		DE365A641A659501004AB3A1 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = DE365A631A659501004AB3A1 /* UIImage+ImageEffects.m */; };
 		DE365A671A65A194004AB3A1 /* UIView+UIView_Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE365A661A65A194004AB3A1 /* UIView+UIView_Additions.m */; };
@@ -52,6 +53,8 @@
 		330A77AE1A8273EA000EED4A /* SPEventResize.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPEventResize.xib; sourceTree = "<group>"; };
 		33968C3C1A8A9E1E00F79565 /* NSNumber+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+Additions.h"; path = "frameworks/NSNumber+Additions.h"; sourceTree = SOURCE_ROOT; };
 		33968C3D1A8A9E1E00F79565 /* NSNumber+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+Additions.m"; path = "frameworks/NSNumber+Additions.m"; sourceTree = SOURCE_ROOT; };
+		33EE80981A9609EF002F0216 /* SPCalendarDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPCalendarDayView.h; sourceTree = "<group>"; };
+		33EE80991A9609EF002F0216 /* SPCalendarDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPCalendarDayView.m; sourceTree = "<group>"; };
 		DE365A5F1A659252004AB3A1 /* tst-bgr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tst-bgr.jpg"; sourceTree = "<group>"; };
 		DE365A621A659501004AB3A1 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		DE365A631A659501004AB3A1 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
@@ -188,6 +191,8 @@
 				DEF910901A3AA42800820513 /* SPEventEditDayCell.h */,
 				DEF910911A3AA42800820513 /* SPEventEditDayCell.m */,
 				DEF910921A3AA42800820513 /* SPEventEditDayCell.xib */,
+				33EE80981A9609EF002F0216 /* SPCalendarDayView.h */,
+				33EE80991A9609EF002F0216 /* SPCalendarDayView.m */,
 				DEF910721A3A9ED200820513 /* Images.xcassets */,
 				DEF910741A3A9ED200820513 /* LaunchScreen.xib */,
 				DEF910651A3A9ED200820513 /* Supporting Files */,
@@ -340,6 +345,7 @@
 				DE365A671A65A194004AB3A1 /* UIView+UIView_Additions.m in Sources */,
 				DEF910931A3AA42800820513 /* SPEventEditDayCell.m in Sources */,
 				DEF9106B1A3A9ED200820513 /* AppDelegate.m in Sources */,
+				33EE809A1A9609EF002F0216 /* SPCalendarDayView.m in Sources */,
 				DEF910A31A3B607E00820513 /* SPEventEditDayVC.m in Sources */,
 				330A77AD1A8272B6000EED4A /* SPEventResize.m in Sources */,
 				DEF9108E1A3A9F8400820513 /* SPEventEditVC.m in Sources */,

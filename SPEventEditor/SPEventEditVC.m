@@ -125,6 +125,34 @@
     [dayVC updateTimeGridScale: 60 ];
     
 }
+- (IBAction)actCancelBtn:(id)sender {
+    
+    CGRect frm = CGRectMake(-50, 0, 100, 2000);
+    
+    UIView * cnt = [[UIView alloc]initWithFrame: frm];
+    
+    [cnt setBackgroundColor:[UIColor clearColor]];
+    
+    
+    frm = CGRectMake(20, 20, 70, 500);
+    
+    UIView * v1 = [[UIView alloc]initWithFrame: frm];
+    
+    [v1 setBackgroundColor:[UIColor redColor]];
+    
+    [cnt addSubview: v1];
+    
+    UIImage * scr = [cnt snapshot];
+    
+    // Create path.
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"Image.png"];
+    
+    // Save image.
+    [UIImagePNGRepresentation(scr) writeToFile:filePath atomically:YES];
+    
+    
+}
 
 #pragma mark - 
 #pragma mark SPEventEditDayDelegate Methods
@@ -193,7 +221,7 @@
     [dayVC.collectionView reloadData];
     
     [dayVC.event removeFromSuperview];
-    [dayVC.grid addSubview: dayVC.event];
+    [dayVC.event addToView: dayVC.grid ];
     
 }
 

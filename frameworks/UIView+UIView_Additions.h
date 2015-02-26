@@ -25,5 +25,6 @@
 
 - (void)scaleBackCompletion:(void (^)(BOOL finished))completion;
 
+- (UIImage *) imageWithView;
 
 @end

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "SPEventEditDayVC.h"
-
+#import "UIView+UIView_Additions.h"
+#import "SPCalendarDayView.h"
 
 @interface SPEventEditVC : UIViewController  <SPEventEditDayDelegate>
 {
