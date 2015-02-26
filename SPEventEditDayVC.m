@@ -155,6 +155,11 @@ static NSString * const reuseIdentifier = @"dayCell";
 
 - (void) show{
     
+//    [self.grid addSubview: event.notePanel ];
+//    
+//    [self.grid addSubview: event.timeLineStartPanel ];
+//    [self.grid addSubview: event.timeLineEndPanel ];
+    
     [event addToView: self.grid ];
     [event layout];
 

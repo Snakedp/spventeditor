@@ -35,8 +35,7 @@
     UIPanGestureRecognizer * panEndGR = [[UIPanGestureRecognizer alloc] initWithTarget:instance action:@selector( panEndTimeLabel: )];
     [instance.timeLineEndPanel addGestureRecognizer: panEndGR ];
 
-    [instance removeFromSuperview];
-        
+    
     return instance;
 }
 
@@ -60,8 +59,6 @@
 //}
 
 -(void) removeFromSuperview{
-    [super removeFromSuperview];
-    
     [self.notePanel removeFromSuperview];
     [self.timeLineStartPanel removeFromSuperview];
     [self.timeLineEndPanel removeFromSuperview];
